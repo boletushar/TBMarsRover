@@ -108,7 +108,6 @@ class MarsRoverViewController: UIViewController, MarsViewDisplay {
     }
 
     func setOutputText(text: String) {
-
         outputLabel.text = text
     }
 
