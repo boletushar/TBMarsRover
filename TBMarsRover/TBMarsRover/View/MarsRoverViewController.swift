@@ -38,7 +38,9 @@ class MarsRoverViewController: UIViewController, MarsViewDisplay {
     // MARK: - MarsViewDisplay
 
     func showError(errorMessage: String) {
-
+        let alert = UIAlertController(title: "Alert", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 
     func showMesh(xBound: CGFloat, yBound: CGFloat) {
