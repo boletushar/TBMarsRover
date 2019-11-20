@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol MarsViewPresenting {
+
+    func processInput(_ input: String)
+}
