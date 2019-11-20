@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BABDA8442385B07200FC320B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8432385B07200FC320B /* AppDelegate.swift */; };
 		BABDA8462385B07200FC320B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8452385B07200FC320B /* SceneDelegate.swift */; };
-		BABDA8482385B07200FC320B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8472385B07200FC320B /* ViewController.swift */; };
+		BABDA8482385B07200FC320B /* MarsRoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8472385B07200FC320B /* MarsRoverViewController.swift */; };
 		BABDA84B2385B07200FC320B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABDA8492385B07200FC320B /* Main.storyboard */; };
 		BABDA84D2385B07300FC320B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABDA84C2385B07300FC320B /* Assets.xcassets */; };
 		BABDA8502385B07300FC320B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABDA84E2385B07300FC320B /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		BABDA8402385B07200FC320B /* TBMarsRover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBMarsRover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABDA8432385B07200FC320B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BABDA8452385B07200FC320B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BABDA8472385B07200FC320B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BABDA8472385B07200FC320B /* MarsRoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverViewController.swift; sourceTree = "<group>"; };
 		BABDA84A2385B07200FC320B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BABDA84C2385B07300FC320B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BABDA84F2385B07300FC320B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				BABDA8432385B07200FC320B /* AppDelegate.swift */,
 				BABDA8452385B07200FC320B /* SceneDelegate.swift */,
-				BABDA8472385B07200FC320B /* ViewController.swift */,
+				BABDA8472385B07200FC320B /* MarsRoverViewController.swift */,
 				BABDA8492385B07200FC320B /* Main.storyboard */,
 				BABDA84C2385B07300FC320B /* Assets.xcassets */,
 				BABDA84E2385B07300FC320B /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BABDA8482385B07200FC320B /* ViewController.swift in Sources */,
+				BABDA8482385B07200FC320B /* MarsRoverViewController.swift in Sources */,
 				BABDA8442385B07200FC320B /* AppDelegate.swift in Sources */,
 				BABDA8462385B07200FC320B /* SceneDelegate.swift in Sources */,
 			);
