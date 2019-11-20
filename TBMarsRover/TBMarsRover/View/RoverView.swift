@@ -34,7 +34,7 @@ class RoverView: UIImageView {
 
     func turnLeft(delay: TimeInterval, completion: ((Bool) -> Void)?) {
 
-        UIView.animate(withDuration: 1.5, delay: delay, options: [], animations: { [weak self] in
+        UIView.animate(withDuration: 0.3, delay: delay, options: [], animations: { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.transform = strongSelf.transform.rotated(by: -CGFloat(Double.pi/2))
         }, completion: completion)
@@ -42,7 +42,7 @@ class RoverView: UIImageView {
 
     func turnRight(delay: TimeInterval, completion: ((Bool) -> Void)?) {
 
-        UIView.animate(withDuration: 1.5, delay: delay, options: [], animations: { [weak self] in
+        UIView.animate(withDuration: 0.3, delay: delay, options: [], animations: { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.transform = strongSelf.transform.rotated(by: CGFloat(Double.pi/2))
         }, completion: completion)
@@ -52,22 +52,22 @@ class RoverView: UIImageView {
 
         switch direction {
         case .north:
-            UIView.animate(withDuration: 1.5, delay: delay, options: [], animations: { [weak self] in
+            UIView.animate(withDuration: 0.3, delay: delay, options: [], animations: { [weak self] in
                 guard let strongSelf = self else { return }
                 strongSelf.center.y = strongSelf.center.y - scale
             }, completion: completion)
         case .east:
-            UIView.animate(withDuration: 1.5, delay: delay, options: [], animations: { [weak self] in
+            UIView.animate(withDuration: 0.3, delay: delay, options: [], animations: { [weak self] in
                 guard let strongSelf = self else { return }
                 strongSelf.center.x = strongSelf.center.x + scale
             }, completion: completion)
         case .west:
-            UIView.animate(withDuration: 1.5, delay: delay, options: [], animations: { [weak self] in
+            UIView.animate(withDuration: 0.3, delay: delay, options: [], animations: { [weak self] in
                 guard let strongSelf = self else { return }
                 strongSelf.center.x = strongSelf.center.x - scale
             }, completion: completion)
         case .south:
-            UIView.animate(withDuration: 1.5, delay: delay, options: [], animations: { [weak self] in
+            UIView.animate(withDuration: 0.3, delay: delay, options: [], animations: { [weak self] in
                 guard let strongSelf = self else { return }
                 strongSelf.center.y = strongSelf.center.y + scale
             }, completion: completion)
