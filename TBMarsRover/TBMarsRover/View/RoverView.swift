@@ -8,8 +8,11 @@
 
 import UIKit
 
+/// RoverView used to hold the rover image as well as perform all the navigation actions
 class RoverView: UIImageView {
 
+    /// Configuration
+    /// - Parameter rover: Holds the rover details like initial position
     func configure(_ rover: Rover) {
 
         image = UIImage.init(named: "mars_rover")
@@ -32,6 +35,9 @@ class RoverView: UIImageView {
         self.addSubview(label)
     }
 
+    /// Function to rotate 90 degrees anti clockwise
+    /// - Parameter delay: Time interval makes it animate sequentially
+    /// - Parameter completion: completion block returned once animation is done
     func turnLeft(delay: TimeInterval, completion: ((Bool) -> Void)?) {
 
         UIView.animate(withDuration: 0.3, delay: delay, options: [], animations: { [weak self] in
@@ -40,6 +46,9 @@ class RoverView: UIImageView {
         }, completion: completion)
     }
 
+    /// Function to rotate 90 degrees clockwise
+    /// - Parameter delay: Time interval makes it animate sequentially
+    /// - Parameter completion: completion block returned once animation is done
     func turnRight(delay: TimeInterval, completion: ((Bool) -> Void)?) {
 
         UIView.animate(withDuration: 0.3, delay: delay, options: [], animations: { [weak self] in
@@ -48,6 +57,11 @@ class RoverView: UIImageView {
         }, completion: completion)
     }
 
+    /// <#Description#>
+    /// - Parameter direction: direction where the rover is facing
+    /// - Parameter scale: scale by which rover need to update its position
+    /// - Parameter delay: Time interval makes it animate sequentially
+    /// - Parameter completion: completion block returned once animation is done
     func moveForward(inDirection direction: Direction, to scale: CGFloat, with delay: TimeInterval, completion: ((Bool) -> Void)?) {
 
         switch direction {
@@ -73,12 +87,4 @@ class RoverView: UIImageView {
             }, completion: completion)
         }
     }
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 }
