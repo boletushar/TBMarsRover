@@ -12,20 +12,47 @@ import XCTest
 class TBMarsRoverTests: XCTestCase {
 
     var presenter: MarsViewPresenting?
+    var mockDisplay: MockMarsViewDisplay!
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
-        presenter =
+        mockDisplay = MockMarsViewDisplay()
+        presenter = MarsViewPresenter(display: mockDisplay)
+        presenter?.processInput("5 5\n1 2 N\nLMLMLMLMM\n3 3 E\nMMRMMRMRRM")
+        presenter?.updateOutput()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        presenter = nil
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testMeshBounds() {
+
+        XCTAssertEqual(mockDisplay.xBound, 5)
+        XCTAssertEqual(mockDisplay.yBound, 5)
+    }
+
+    func testRoverData() {
+
+        XCTAssertEqual(mockDisplay.rovers?.count, 2)
+
+        let rover1 = mockDisplay.rovers?.first
+        XCTAssertEqual(rover1?.xPos, 1)
+        XCTAssertEqual(rover1?.yPos, 2)
+        XCTAssertEqual(rover1?.direction.text, "N")
+
+        let rover2 = mockDisplay.rovers?.last
+        XCTAssertEqual(rover2?.xPos, 3)
+        XCTAssertEqual(rover2?.yPos, 3)
+        XCTAssertEqual(rover2?.direction.text, "E")
+    }
+
+    func testFinalPosition() {
+
+        sleep(1)
+        XCTAssertEqual(mockDisplay.outputText, "1 3 N\n5 1 E\n")
     }
 
     func testPerformanceExample() {

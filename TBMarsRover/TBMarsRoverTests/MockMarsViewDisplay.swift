@@ -12,7 +12,7 @@ import UIKit
 
 class MockMarsViewDisplay: MarsViewDisplay {
 
-    private(set) var errorText: String = ""
+    private(set) var errorText: String?
     func showError(errorMessage: String) {
         errorText = errorMessage
     }
@@ -30,11 +30,10 @@ class MockMarsViewDisplay: MarsViewDisplay {
     }
 
     func navigate(rover: Rover, at index: Int, for path: RoverNavigationPath, with delay: TimeInterval) {
-
     }
 
-    
-    func setOutputText(rovers: [Rover]) {
-
+    private(set) var outputText: String?
+    func setOutputText(text: String) {
+        outputText = text
     }
 }
