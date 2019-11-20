@@ -56,15 +56,31 @@
 		BABDA8422385B07200FC320B /* TBMarsRover */ = {
 			isa = PBXGroup;
 			children = (
+				BABDA8582385B1C500FC320B /* View */,
+				BABDA8572385B1BB00FC320B /* Model */,
 				BABDA8432385B07200FC320B /* AppDelegate.swift */,
 				BABDA8452385B07200FC320B /* SceneDelegate.swift */,
-				BABDA8472385B07200FC320B /* MarsRoverViewController.swift */,
-				BABDA8492385B07200FC320B /* Main.storyboard */,
 				BABDA84C2385B07300FC320B /* Assets.xcassets */,
 				BABDA84E2385B07300FC320B /* LaunchScreen.storyboard */,
 				BABDA8512385B07300FC320B /* Info.plist */,
 			);
 			path = TBMarsRover;
+			sourceTree = "<group>";
+		};
+		BABDA8572385B1BB00FC320B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BABDA8582385B1C500FC320B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BABDA8472385B07200FC320B /* MarsRoverViewController.swift */,
+				BABDA8492385B07200FC320B /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
