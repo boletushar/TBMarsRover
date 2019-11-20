@@ -11,10 +11,14 @@ import UIKit
 
 class MarsViewPresenter: MarsViewPresenting {
 
+    // MARK: - Private variables
+
     private weak var display: MarsViewDisplay!
 
     private var rovers: [Rover] = []
 
+    // MARK: - Initialisation
+    
     init(display: MarsViewDisplay) {
         self.display = display
     }
