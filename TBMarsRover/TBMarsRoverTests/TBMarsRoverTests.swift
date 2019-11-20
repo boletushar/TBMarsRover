@@ -7,11 +7,16 @@
 //
 
 import XCTest
+@testable import TBMarsRover
 
 class TBMarsRoverTests: XCTestCase {
 
+    var presenter: MarsViewPresenting?
+
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        presenter =
     }
 
     override func tearDown() {
@@ -29,5 +34,4 @@ class TBMarsRoverTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

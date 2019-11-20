@@ -20,7 +20,19 @@
 		BABDA8642385BC8900FC320B /* MeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8632385BC8900FC320B /* MeshView.swift */; };
 		BABDA8662385C34F00FC320B /* RoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8652385C34F00FC320B /* RoverView.swift */; };
 		BABDA86B2385C48600FC320B /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA86A2385C48600FC320B /* UIImage+Rotate.swift */; };
+		BABDA8762385DF6C00FC320B /* TBMarsRoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8752385DF6C00FC320B /* TBMarsRoverTests.swift */; };
+		BABDA87E2385E01700FC320B /* MockMarsViewDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA87D2385E01700FC320B /* MockMarsViewDisplay.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BABDA8782385DF6C00FC320B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BABDA8382385B07200FC320B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BABDA83F2385B07200FC320B;
+			remoteInfo = TBMarsRover;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BABDA8402385B07200FC320B /* TBMarsRover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBMarsRover.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +50,21 @@
 		BABDA8632385BC8900FC320B /* MeshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshView.swift; sourceTree = "<group>"; };
 		BABDA8652385C34F00FC320B /* RoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverView.swift; sourceTree = "<group>"; };
 		BABDA86A2385C48600FC320B /* UIImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
+		BABDA8732385DF6C00FC320B /* TBMarsRoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBMarsRoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABDA8752385DF6C00FC320B /* TBMarsRoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBMarsRoverTests.swift; sourceTree = "<group>"; };
+		BABDA8772385DF6C00FC320B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BABDA87D2385E01700FC320B /* MockMarsViewDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMarsViewDisplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BABDA83D2385B07200FC320B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABDA8702385DF6C00FC320B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				BABDA8422385B07200FC320B /* TBMarsRover */,
+				BABDA8742385DF6C00FC320B /* TBMarsRoverTests */,
 				BABDA8412385B07200FC320B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				BABDA8402385B07200FC320B /* TBMarsRover.app */,
+				BABDA8732385DF6C00FC320B /* TBMarsRoverTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +153,16 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		BABDA8742385DF6C00FC320B /* TBMarsRoverTests */ = {
+			isa = PBXGroup;
+			children = (
+				BABDA8752385DF6C00FC320B /* TBMarsRoverTests.swift */,
+				BABDA8772385DF6C00FC320B /* Info.plist */,
+				BABDA87D2385E01700FC320B /* MockMarsViewDisplay.swift */,
+			);
+			path = TBMarsRoverTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,6 +183,24 @@
 			productReference = BABDA8402385B07200FC320B /* TBMarsRover.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BABDA8722385DF6C00FC320B /* TBMarsRoverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BABDA87C2385DF6C00FC320B /* Build configuration list for PBXNativeTarget "TBMarsRoverTests" */;
+			buildPhases = (
+				BABDA86F2385DF6C00FC320B /* Sources */,
+				BABDA8702385DF6C00FC320B /* Frameworks */,
+				BABDA8712385DF6C00FC320B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BABDA8792385DF6C00FC320B /* PBXTargetDependency */,
+			);
+			name = TBMarsRoverTests;
+			productName = TBMarsRoverTests;
+			productReference = BABDA8732385DF6C00FC320B /* TBMarsRoverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +213,10 @@
 				TargetAttributes = {
 					BABDA83F2385B07200FC320B = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					BABDA8722385DF6C00FC320B = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = BABDA83F2385B07200FC320B;
 					};
 				};
 			};
@@ -177,6 +234,7 @@
 			projectRoot = "";
 			targets = (
 				BABDA83F2385B07200FC320B /* TBMarsRover */,
+				BABDA8722385DF6C00FC320B /* TBMarsRoverTests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +247,13 @@
 				BABDA8502385B07300FC320B /* LaunchScreen.storyboard in Resources */,
 				BABDA84D2385B07300FC320B /* Assets.xcassets in Resources */,
 				BABDA84B2385B07200FC320B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABDA8712385DF6C00FC320B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +277,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BABDA86F2385DF6C00FC320B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BABDA87E2385E01700FC320B /* MockMarsViewDisplay.swift in Sources */,
+				BABDA8762385DF6C00FC320B /* TBMarsRoverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BABDA8792385DF6C00FC320B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BABDA83F2385B07200FC320B /* TBMarsRover */;
+			targetProxy = BABDA8782385DF6C00FC320B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BABDA8492385B07200FC320B /* Main.storyboard */ = {
@@ -386,6 +468,46 @@
 			};
 			name = Release;
 		};
+		BABDA87A2385DF6C00FC320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5X2H99YMUC;
+				INFOPLIST_FILE = TBMarsRoverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bole.tushar.TBMarsRoverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TBMarsRover.app/TBMarsRover";
+			};
+			name = Debug;
+		};
+		BABDA87B2385DF6C00FC320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5X2H99YMUC;
+				INFOPLIST_FILE = TBMarsRoverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bole.tushar.TBMarsRoverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TBMarsRover.app/TBMarsRover";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -403,6 +525,15 @@
 			buildConfigurations = (
 				BABDA8552385B07300FC320B /* Debug */,
 				BABDA8562385B07300FC320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BABDA87C2385DF6C00FC320B /* Build configuration list for PBXNativeTarget "TBMarsRoverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BABDA87A2385DF6C00FC320B /* Debug */,
+				BABDA87B2385DF6C00FC320B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
