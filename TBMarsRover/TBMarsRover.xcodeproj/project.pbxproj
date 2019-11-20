@@ -17,6 +17,7 @@
 		BABDA85D2385B37400FC320B /* MarsRoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA85C2385B37400FC320B /* MarsRoverPresenter.swift */; };
 		BABDA8602385B3AD00FC320B /* MarsRoverPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA85F2385B3AD00FC320B /* MarsRoverPresenting.swift */; };
 		BABDA8622385B3BA00FC320B /* MarsRoverDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8612385B3BA00FC320B /* MarsRoverDisplay.swift */; };
+		BABDA8642385BC8900FC320B /* MeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8632385BC8900FC320B /* MeshView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BABDA85C2385B37400FC320B /* MarsRoverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverPresenter.swift; sourceTree = "<group>"; };
 		BABDA85F2385B3AD00FC320B /* MarsRoverPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverPresenting.swift; sourceTree = "<group>"; };
 		BABDA8612385B3BA00FC320B /* MarsRoverDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverDisplay.swift; sourceTree = "<group>"; };
+		BABDA8632385BC8900FC320B /* MeshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				BABDA8472385B07200FC320B /* MarsRoverViewController.swift */,
 				BABDA8492385B07200FC320B /* Main.storyboard */,
+				BABDA8632385BC8900FC320B /* MeshView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BABDA8602385B3AD00FC320B /* MarsRoverPresenting.swift in Sources */,
+				BABDA8642385BC8900FC320B /* MeshView.swift in Sources */,
 				BABDA85A2385B27700FC320B /* Rover.swift in Sources */,
 				BABDA8482385B07200FC320B /* MarsRoverViewController.swift in Sources */,
 				BABDA8622385B3BA00FC320B /* MarsRoverDisplay.swift in Sources */,
