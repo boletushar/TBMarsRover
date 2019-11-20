@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MarsViewPresenter: MarsViewPresenting {
 
@@ -18,7 +19,103 @@ class MarsViewPresenter: MarsViewPresenting {
         self.display = display
     }
 
+    // MARK: - MarsViewPresenting
+
     func processInput(_ input: String) {
-        
+
+        guard isValidInput(input) else { return }
+
+        let inputArray = input.split(separator: "\n")
+
+        configureMeshData(meshData: String(inputArray[0]))
+
+        showRover(inputArray)
+
+        navigateRover(inputArray)
+    }
+}
+
+// MARK: - Private functions
+
+extension MarsViewPresenter {
+
+    private func isValidInput(_ input: String) -> Bool {
+
+        // If user do not enter any input
+        guard !input.isEmpty else {
+            display.showError(errorMessage: "Please enter the input")
+            return false
+        }
+
+        // If the first line is not a correct grid information
+        guard input.split(separator: "\n")[0].split(separator: " ").count == 2 else {
+            display.showError(errorMessage: "Please enter the valid grid bounds on first line e.g. 3 3")
+            return false
+        }
+
+        // To check if the input is present to display atleast one rover
+        guard input.split(separator: "\n").count >= 3 else {
+            display.showError(errorMessage: "Please enter the valid Rover cordinates and Navigation info")
+            return false
+        }
+
+        return true
+    }
+
+    private func configureMeshData(meshData: String) {
+
+        let xBound = CFloat("\(meshData.split(separator: " ")[0])")
+        let yBound = CFloat("\(meshData.split(separator: " ")[1])")
+        display.showMesh(xBound: CGFloat(xBound ?? 10), yBound: CGFloat(yBound ?? 10))
+    }
+
+    private func showRover(_ inputData: [Substring]) {
+        rovers.removeAll()
+        let roverDetails = stride(from: 1, to: inputData.count, by: 2).map { inputData[$0] }
+        var id: Int = 1
+        for roverData in roverDetails {
+            let roverDetails = roverData.split(separator: " ")
+            rovers.append(
+                Rover(
+                    id: id,
+                    xPos: CGFloat(CFloat("\(roverDetails[0])") ?? 0),
+                    yPos: CGFloat(CFloat("\(roverDetails[1])") ?? 0),
+                    direction: Direction(rawValue: roverDetails[2].uppercased()) ?? .north
+                )
+            )
+            id += 1
+        }
+        display.setRovers(rovers: rovers)
+    }
+
+    private func navigateRover(_ inputData: [Substring]) {
+
+        let roverNavigations = stride(from: 2, to: inputData.count, by: 2).map { inputData[$0] }
+
+        var index: Int = 0
+        var delay: TimeInterval = 0.3
+        for navigation in roverNavigations {
+
+            for (_, char) in navigation.enumerated() {
+
+                var navigate: RoverNavigationPath = .moveForward
+                switch char {
+                case "L":
+                    rovers[index].turnLeft()
+                    navigate = .turnLeft
+                case "R":
+                    rovers[index].turnRight()
+                    navigate = .turnRight
+                case "M":
+                    rovers[index].moveForward()
+                    navigate = .moveForward
+                default: break
+                }
+                display.navigate(rover: rovers[index], atIndex: index, for: navigate, withdelay: delay)
+                delay += 0.3
+            }
+
+            index += 1
+        }
     }
 }

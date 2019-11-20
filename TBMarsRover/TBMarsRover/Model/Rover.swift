@@ -15,7 +15,7 @@ struct Rover {
     var yPos: CGFloat
     var direction: Direction
 
-    mutating func moveRover() {
+    mutating func moveForward() {
         switch direction {
         case .north:
             yPos += 1
