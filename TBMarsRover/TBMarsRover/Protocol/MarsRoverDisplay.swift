@@ -19,7 +19,7 @@ protocol MarsViewDisplay: class {
 
     func showError(errorMessage: String)
 
-    func setMesh(xBound: CGFloat, yBound: CGFloat)
+    func showMesh(xBound: CGFloat, yBound: CGFloat)
 
     func setRovers(rovers: [Rover])
 

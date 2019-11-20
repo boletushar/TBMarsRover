@@ -22,6 +22,10 @@ class MarsRoverViewController: UIViewController, MarsViewDisplay {
 
     private(set) var presenter: MarsViewPresenting!
 
+    private var meshView: MeshView?
+
+    private var multiplier: CGFloat = 0
+
     // MARK: - Lifecycle override
 
     override func viewDidLoad() {
@@ -37,8 +41,25 @@ class MarsRoverViewController: UIViewController, MarsViewDisplay {
 
     }
 
-    func setMesh(xBound: CGFloat, yBound: CGFloat) {
+    func showMesh(xBound: CGFloat, yBound: CGFloat) {
 
+        meshView?.removeFromSuperview()
+        meshView = nil
+
+        // Provide some padding so as to display Rover on the edges of Mesh
+        let maxAvailableSize = CGSize(width: marsSurfaceView.frame.width - 20, height: marsSurfaceView.frame.height - 20)
+        multiplier = min(maxAvailableSize.width/xBound, maxAvailableSize.height/yBound)
+
+        meshView = MeshView(frame: CGRect(x: (maxAvailableSize.width - multiplier * xBound) / 2,
+                                          y: (maxAvailableSize.height - multiplier * yBound) / 2,
+                                          width: multiplier * xBound,
+                                          height: multiplier * yBound))
+        meshView?.meshHeightMultiple = yBound
+        meshView?.meshWidthMultiple = xBound
+        meshView?.backgroundColor = .clear
+        meshView?.layer.borderColor = UIColor.white.cgColor
+        meshView?.layer.borderWidth = 1.0
+        marsSurfaceView.addSubview(meshView!)
     }
 
     func setRovers(rovers: [Rover]) {
