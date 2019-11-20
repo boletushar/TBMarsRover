@@ -16,6 +16,8 @@ class MarsRoverViewController: UIViewController, MarsViewDisplay {
 
     @IBOutlet weak var outputLabel: UILabel!
 
+    @IBOutlet weak var marsSurfaceView: UIImageView!
+
     // MARK: - Private variables
 
     private(set) var presenter: MarsViewPresenting!
@@ -35,7 +37,7 @@ class MarsRoverViewController: UIViewController, MarsViewDisplay {
 
     }
 
-    func setGrid(xPos: CGFloat, yPos: CGFloat) {
+    func setMesh(xBound: CGFloat, yBound: CGFloat) {
 
     }
 

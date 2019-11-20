@@ -85,6 +85,7 @@
                     </view>
                     <connections>
                         <outlet property="inputTextView" destination="OUO-vY-Foo" id="b8e-SF-TDU"/>
+                        <outlet property="marsSurfaceView" destination="nf0-xc-1TZ" id="RcJ-qB-tnS"/>
                         <outlet property="outputLabel" destination="dUA-Al-7uX" id="oJT-gN-EcH"/>
                     </connections>
                 </viewController>
