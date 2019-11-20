@@ -43,6 +43,8 @@ class MarsViewPresenter: MarsViewPresenting {
 
 extension MarsViewPresenter {
 
+    /// Function to validate input
+    /// - Parameter input: input text entered by user
     private func isValidInput(_ input: String) -> Bool {
 
         // If user do not enter any input
@@ -66,6 +68,8 @@ extension MarsViewPresenter {
         return true
     }
 
+    /// Function to configure Mesh data
+    /// - Parameter meshData: First line of Input box holds the maximum bounds
     private func configureMeshData(meshData: String) {
 
         let xBound = CFloat("\(meshData.split(separator: " ")[0])")
@@ -73,6 +77,8 @@ extension MarsViewPresenter {
         display.showMesh(xBound: CGFloat(xBound ?? 10), yBound: CGFloat(yBound ?? 10))
     }
 
+    /// Function to constitute array of Rover based on Input
+    /// - Parameter inputData: String array holds user input sperated by \n
     private func showRover(_ inputData: [Substring]) {
         rovers.removeAll()
         let roverDetails = stride(from: 1, to: inputData.count, by: 2).map { inputData[$0] }
@@ -92,13 +98,14 @@ extension MarsViewPresenter {
         display.setRovers(rovers: rovers)
     }
 
+    /// Function to navigate Rovers based on Input
+    /// - Parameter inputData: String array holds user input sperated by \n
     private func navigateRover(_ inputData: [Substring]) {
 
         let roverNavigations = stride(from: 2, to: inputData.count, by: 2).map { inputData[$0] }
 
-        var index: Int = 0
         var delay: TimeInterval = 0.3
-        for navigation in roverNavigations {
+        for (index, navigation) in roverNavigations.enumerated() {
 
             for (_, char) in navigation.enumerated() {
 
@@ -118,8 +125,6 @@ extension MarsViewPresenter {
                 display.navigate(rover: rovers[index], at: index, for: path, with: delay)
                 delay += 0.3
             }
-
-            index += 1
         }
     }
 }
