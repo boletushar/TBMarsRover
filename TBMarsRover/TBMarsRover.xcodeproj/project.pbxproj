@@ -13,6 +13,7 @@
 		BABDA84B2385B07200FC320B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABDA8492385B07200FC320B /* Main.storyboard */; };
 		BABDA84D2385B07300FC320B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABDA84C2385B07300FC320B /* Assets.xcassets */; };
 		BABDA8502385B07300FC320B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABDA84E2385B07300FC320B /* LaunchScreen.storyboard */; };
+		BABDA85A2385B27700FC320B /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8592385B27700FC320B /* Rover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BABDA84C2385B07300FC320B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BABDA84F2385B07300FC320B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BABDA8512385B07300FC320B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BABDA8592385B27700FC320B /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		BABDA8572385B1BB00FC320B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BABDA8592385B27700FC320B /* Rover.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABDA85A2385B27700FC320B /* Rover.swift in Sources */,
 				BABDA8482385B07200FC320B /* MarsRoverViewController.swift in Sources */,
 				BABDA8442385B07200FC320B /* AppDelegate.swift in Sources */,
 				BABDA8462385B07200FC320B /* SceneDelegate.swift in Sources */,
