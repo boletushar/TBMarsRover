@@ -64,14 +64,54 @@ class MarsRoverViewController: UIViewController, MarsViewDisplay {
 
     func setRovers(rovers: [Rover]) {
 
+        for rover in rovers {
+
+            let xPos = multiplier * rover.xPos - multiplier / 2
+            let yPos = (meshView?.frame.height ?? marsSurfaceView.frame.height) - multiplier * rover.yPos
+            let roverView = RoverView(frame: CGRect(x: xPos, y: yPos - multiplier/2, width: multiplier, height: multiplier))
+            roverView.configure(rover)
+            meshView?.addSubview(roverView)
+        }
     }
 
-    func navigate(rover: Rover, atIndex: Int, for path: RoverNavigationPath, withdelay: TimeInterval) {
+    func navigate(rover: Rover, at index: Int, for path: RoverNavigationPath, with delay: TimeInterval) {
 
+        let roverView: RoverView = meshView?.subviews.first(where: { $0.isKind(of: RoverView.self) && $0.tag == rover.id }) as! RoverView
+
+        switch path {
+        case .turnLeft:
+            roverView.turnLeft(delay: delay) { (finished) in
+                if finished {
+                    self.presenter.updateOutput()
+                }
+            }
+        case .turnRight:
+            roverView.turnRight(delay: delay) { (finished) in
+                if finished {
+                    self.presenter.updateOutput()
+                }
+            }
+        case .moveForward:
+            roverView.moveForward(inDirection: rover.direction, to: multiplier, with: delay) { (finished) in
+                if finished {
+                    self.presenter.updateOutput()
+                }
+            }
+        }
     }
 
     func setOutputText(rovers: [Rover]) {
 
+        var position: String = ""
+        for rover in rovers {
+            position.append(contentsOf: "\(Int(rover.xPos)) \(Int(rover.yPos)) \(rover.direction.text)\n")
+        }
+        outputLabel.text = position
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
     }
 
     // MARK: - Button action

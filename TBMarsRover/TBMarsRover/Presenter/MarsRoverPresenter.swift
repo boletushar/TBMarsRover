@@ -33,6 +33,10 @@ class MarsViewPresenter: MarsViewPresenting {
 
         navigateRover(inputArray)
     }
+
+    func updateOutput() {
+        display.setOutputText(rovers: rovers)
+    }
 }
 
 // MARK: - Private functions
@@ -98,20 +102,20 @@ extension MarsViewPresenter {
 
             for (_, char) in navigation.enumerated() {
 
-                var navigate: RoverNavigationPath = .moveForward
+                var path: RoverNavigationPath = .moveForward
                 switch char {
                 case "L":
                     rovers[index].turnLeft()
-                    navigate = .turnLeft
+                    path = .turnLeft
                 case "R":
                     rovers[index].turnRight()
-                    navigate = .turnRight
+                    path = .turnRight
                 case "M":
                     rovers[index].moveForward()
-                    navigate = .moveForward
+                    path = .moveForward
                 default: break
                 }
-                display.navigate(rover: rovers[index], atIndex: index, for: navigate, withdelay: delay)
+                display.navigate(rover: rovers[index], at: index, for: path, with: delay)
                 delay += 0.3
             }
 
