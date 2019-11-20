@@ -35,6 +35,11 @@ class MarsRoverViewController: UIViewController, MarsViewDisplay {
         presenter = MarsViewPresenter(display: self)
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+
     // MARK: - MarsViewDisplay
 
     func showError(errorMessage: String) {
@@ -102,18 +107,9 @@ class MarsRoverViewController: UIViewController, MarsViewDisplay {
         }
     }
 
-    func setOutputText(rovers: [Rover]) {
+    func setOutputText(text: String) {
 
-        var position: String = ""
-        for rover in rovers {
-            position.append(contentsOf: "\(Int(rover.xPos)) \(Int(rover.yPos)) \(rover.direction.text)\n")
-        }
-        outputLabel.text = position
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-        super.touchesBegan(touches, with: event)
+        outputLabel.text = text
     }
 
     // MARK: - Button action

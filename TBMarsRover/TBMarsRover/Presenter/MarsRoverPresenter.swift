@@ -18,7 +18,7 @@ class MarsViewPresenter: MarsViewPresenting {
     private var rovers: [Rover] = []
 
     // MARK: - Initialisation
-    
+
     init(display: MarsViewDisplay) {
         self.display = display
     }
@@ -39,7 +39,11 @@ class MarsViewPresenter: MarsViewPresenting {
     }
 
     func updateOutput() {
-        display.setOutputText(rovers: rovers)
+        var position: String = ""
+        for rover in rovers {
+            position.append(contentsOf: "\(Int(rover.xPos)) \(Int(rover.yPos)) \(rover.direction.text)\n")
+        }
+        display.setOutputText(text: position)
     }
 }
 

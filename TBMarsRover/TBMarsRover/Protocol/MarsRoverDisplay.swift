@@ -38,6 +38,6 @@ protocol MarsViewDisplay: class {
     func navigate(rover: Rover, at index: Int, for path: RoverNavigationPath, with delay: TimeInterval)
 
     /// Asks display to show the position of Rovers
-    /// - Parameter rovers: Array of Rover objects
-    func setOutputText(rovers: [Rover])
+    /// - Parameter text: text to be assigned to output label
+    func setOutputText(text: String)
 }
