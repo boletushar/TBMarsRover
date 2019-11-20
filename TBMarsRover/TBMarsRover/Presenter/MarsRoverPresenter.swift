@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+class MarsViewPresenter: MarsViewPresenting {
+
+    private weak var display: MarsViewDisplay!
+
+    private var rovers: [Rover] = []
+
+    init(display: MarsViewDisplay) {
+        self.display = display
+    }
+
+    func processInput(_ input: String) {
+        
+    }
+}
