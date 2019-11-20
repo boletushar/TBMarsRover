@@ -10,7 +10,10 @@ import Foundation
 
 protocol MarsViewPresenting {
 
+    /// Informs presenter that user has provided input
+    /// - Parameter input: input text entered by user
     func processInput(_ input: String)
 
+    /// Informs presenter that it needs to update Rover position text
     func updateOutput()
 }
