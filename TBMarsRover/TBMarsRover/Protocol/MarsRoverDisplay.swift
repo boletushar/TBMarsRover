@@ -23,7 +23,7 @@ protocol MarsViewDisplay: class {
 
     func setRovers(rovers: [Rover])
 
-    func navigate(rover: Rover, atIndex: Int, for path: RoverNavigationPath, withdelay: TimeInterval)
+    func navigate(rover: Rover, at index: Int, for path: RoverNavigationPath, with delay: TimeInterval)
 
     func setOutputText(rovers: [Rover])
 }
