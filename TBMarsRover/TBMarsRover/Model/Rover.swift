@@ -60,4 +60,8 @@ enum Direction: String {
     case east = "E"
     case west = "W"
     case south = "S"
+
+    var text: String {
+        return rawValue
+    }
 }
