@@ -18,6 +18,8 @@
 		BABDA8602385B3AD00FC320B /* MarsRoverPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA85F2385B3AD00FC320B /* MarsRoverPresenting.swift */; };
 		BABDA8622385B3BA00FC320B /* MarsRoverDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8612385B3BA00FC320B /* MarsRoverDisplay.swift */; };
 		BABDA8642385BC8900FC320B /* MeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8632385BC8900FC320B /* MeshView.swift */; };
+		BABDA8662385C34F00FC320B /* RoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA8652385C34F00FC320B /* RoverView.swift */; };
+		BABDA86B2385C48600FC320B /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDA86A2385C48600FC320B /* UIImage+Rotate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		BABDA85F2385B3AD00FC320B /* MarsRoverPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverPresenting.swift; sourceTree = "<group>"; };
 		BABDA8612385B3BA00FC320B /* MarsRoverDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverDisplay.swift; sourceTree = "<group>"; };
 		BABDA8632385BC8900FC320B /* MeshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshView.swift; sourceTree = "<group>"; };
+		BABDA8652385C34F00FC320B /* RoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverView.swift; sourceTree = "<group>"; };
+		BABDA86A2385C48600FC320B /* UIImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		BABDA8422385B07200FC320B /* TBMarsRover */ = {
 			isa = PBXGroup;
 			children = (
+				BABDA8692385C46F00FC320B /* Extension */,
 				BABDA85E2385B37C00FC320B /* Protocol */,
 				BABDA85B2385B35900FC320B /* Presenter */,
 				BABDA8582385B1C500FC320B /* View */,
@@ -93,6 +98,7 @@
 				BABDA8472385B07200FC320B /* MarsRoverViewController.swift */,
 				BABDA8492385B07200FC320B /* Main.storyboard */,
 				BABDA8632385BC8900FC320B /* MeshView.swift */,
+				BABDA8652385C34F00FC320B /* RoverView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +118,14 @@
 				BABDA8612385B3BA00FC320B /* MarsRoverDisplay.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BABDA8692385C46F00FC320B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BABDA86A2385C48600FC320B /* UIImage+Rotate.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABDA86B2385C48600FC320B /* UIImage+Rotate.swift in Sources */,
 				BABDA8602385B3AD00FC320B /* MarsRoverPresenting.swift in Sources */,
 				BABDA8642385BC8900FC320B /* MeshView.swift in Sources */,
 				BABDA85A2385B27700FC320B /* Rover.swift in Sources */,
@@ -192,6 +207,7 @@
 				BABDA8622385B3BA00FC320B /* MarsRoverDisplay.swift in Sources */,
 				BABDA85D2385B37400FC320B /* MarsRoverPresenter.swift in Sources */,
 				BABDA8442385B07200FC320B /* AppDelegate.swift in Sources */,
+				BABDA8662385C34F00FC320B /* RoverView.swift in Sources */,
 				BABDA8462385B07200FC320B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
